@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+}
+.menu-top{
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+} 
+.nav-top ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-top li{
+    color: blanchedalmond;
+    list-style-type: none;
+    transition: 0.5s;
+    padding: 25px;
+    padding-right: 50px ;
+}
+.nav-top a{
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Roboto Mono', monospace;
+    transition: 0.5s;
+    
+}
+
+/*Interatividade - efeito */
+ul:hover li a{
+    transform: scale(1.5);
+    opacity: .2;
+    filter: blur(3px);
+    
+}
+ul li:hover a{
+    
+    color: #ffff;
+}
+ul li a:hover{
+    transform: scale(2);
+    opacity: 1;
+    filter: blur(0);
+}
+a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #EF5756;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    z-index: -1;
+}
+ul li a:hover:before{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scale(1);
+}
+
+/*Fim do efeito*/
+
+footer img{
+    float: right;
+    padding: 15px;
+    align-items: flex-end;
+    margin: 0 auto;
+    
+}
